@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dockerizing
+spec:
+  containers:
+    - name: dockerizing
+      image: fredoliveirace/dockerizing
+      ports:
+        - containerPort: 8090

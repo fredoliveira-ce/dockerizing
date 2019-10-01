@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dockerizing-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dockerizing
+  template:
+    metadata:
+      labels:
+        app: dockerizing
+    spec:
+      containers:
+        - name: dockerizing
+          image: fredoliveirace/dockerizing
+          ports:
+            - containerPort: 8090
